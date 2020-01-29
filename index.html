@@ -9,10 +9,11 @@
 <body>
     
     <script>    
+        var leng_Math = ("Введите один математический оператор " + " - + / * % ");
         function getResult (firstNumber = 2,secondNumber = 3,mathSign = " * ") {
             
             if (mathSign.length >= 2 ) {
-                return("Введите один математический оператор ", " - + / * % ");
+                return leng_Math;
             }
             else if (mathSign === "*") {
                 return firstNumber * secondNumber;
