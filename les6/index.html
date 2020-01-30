@@ -9,8 +9,8 @@
 <body>
     
     <script>
-        function getString(word = "Hello",[o]) {
-            if (word.indexOf([o]) != -1) {
+        function getString(word = "Hello",letter = ["o"]) {
+            if (word.indexOf([letter]) != -1) {
                 return word.replace(letter,"");
             }
             return ("Нет такой буквы в этом слове!");  
