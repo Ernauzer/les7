@@ -1,16 +1,12 @@
-const map = function(array, func) {
-    const newArray = [];
-
-    for (let i = 0; i < array.length; i++) {
-        newArray.push(func(array[i], i, array));
+const get = (str,exc) => {
+    let result = str;
+    for (let i = 0; i < str.length; i++) {
+        for (let j = 0; j < exc.length; j++) {
+            if(str[i] !== exc[j]) {
+                result = result.replace(exc[j],"")
+            }   
+        }
     }
-    return newArray;
-};
-const array = [1, 8, 27, 64]; // eslint-disable-line
-
-const getCube = num => {
-    const cube = 3;
-    return num ** cube;
-};
-
-map(array, getCube);
+    return result;
+}
+console.log(get("Hello JS",["H","e","l","o"," "]));
